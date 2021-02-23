@@ -254,7 +254,7 @@ supplementary material.
 
 There are several hydrological models that have been developed in
 Switzerland (Table \ref{tab:modelslist}), ranging from
-rainfall-runoff models (PREVAH, GSM-SOCONT, RS, SEHR-ECHO, WaSiM-ETH),
+rainfall-runoff models (PREVAH, GSM-SOCONT, RS, SEHR-ECHO, WaSiM),
 to snow-based models (ALPINE3D), glacier-hydrology models (GERM) and
 water temperature models (StreamFlow). Some models
 (Table \ref{tab:modelslist}) have their roots outside
@@ -296,7 +296,7 @@ accumulation and melt, some also include glacier-related processes.
 	SWAT  & Soil Water and Assessment Tool & semi-distributed &  A-CH,A \\
 	TOPKAPI-ETH & TOPographic Kinematic APproximation and Integration - ETH & distributed &  E  \\
 	VIC & Variable Infiltration Capacity model & distributed &  A \\
-	WaSiM-ETH & Water Flow and Balance Simulation Model - ETH & distributed &  D  \\
+	WaSiM(-ETH) & Water Flow and Balance Simulation Model (- ETH) & distributed &  D  \\
 	wflow & wflow & distributed &  A  \\
 	\enddata
 \end{deluxetable}
@@ -446,14 +446,14 @@ forecasts \citep{Monhart_2019,Anghileri2019}, which is still in its infancy in
 Switzerland.
 
 Despite the dominance of HBV and PREVAH, the considerably more complex
-WaSiM-ETH model has, however, also been used for research studies on
+WaSiM model has, however, also been used for research studies on
 improving flood forecasting in mountainous areas \citep{Jasper2003,Ahrens2003b,Jasper2002}.
-Along with HBV, PREVAH and LARSIM, WaSim-ETH is today part of the Swiss
+Along with HBV, PREVAH and LARSIM, WaSim is today part of the Swiss
 operational ensemble forecasting system \citep{Karsten2016}, which uses
 the FEWS platform (Flood Early Warning System; \citealp{Werner_2013}) to
 provide forecasts for the cantonal authorities and the
 public \citep{FOEN2019}. A key advantage of the computationally
-intensive WaSiM-ETH model is the fact that it can explicitly account for
+intensive WaSiM model is the fact that it can explicitly account for
 lake regulations and hydropower operations (J. Schulla, personal
 communication, October 23, 2020). 
 
@@ -462,7 +462,7 @@ specific flood forecasting tool for the upper Rhone river catchment, a
 large catchment (5220 km\textsuperscript{2}, see
 Fig. \ref{fig:map}) strongly influenced by glacier
 melt and hydropower production \citep{GarciaHernandez2009b,GarciaHernandez2009,Jordan2010}. 
-Before the recent implementation in WaSiM-ETH and in TOPKAPI-ETH, RS MINERVE was the only
+Before the recent implementation in WaSiM and in TOPKAPI-ETH, RS MINERVE was the only
 operational tool that explicitly modelled the effect of lakes and
 hydraulic infrastructures.
 
@@ -497,14 +497,14 @@ for Swiss catchments.
 Other complex distributed models are to date only used to study specific
 flood types that involve a good physical parameterization of small scale
 processes, such as rain-on-snow flood events, as in the study
-by \citet{Rossler2014} with WaSiM-ETH. 
+by \citet{Rossler2014} with WaSiM. 
 
 In addition to the above studies, there are also applications aiming at
 the reconstruction and/or reproduction of historical floods dating
 further in the past. The effect of a major volcanic eruption in 1816 on
 the generation of floods in the upper Rhine basin (see
 Fig. \ref{fig:map}) has been analysed
-by \citet{Rossler2018} using WaSiM-ETH. \citet{Stucki2018} reconstructed
+by \citet{Rossler2018} using WaSiM. \citet{Stucki2018} reconstructed
 a large flood of the 19th Century in Ticino with PREVAH coupled with the
 routing part of RS (the model was chosen because it was already
 calibrated for the region
@@ -545,13 +545,13 @@ Switzerland, which have, however, not been specifically designed for
 climate change impact analysis; detailed assessments of how well these
 models can simulate future conditions are largely missing.
 
-WaSiM-ETH was, for example, chosen by \citet{Jasper2004} to assess the
+WaSiM was, for example, chosen by \citet{Jasper2004} to assess the
 effect of different regional climate scenarios in the Thur and the
 Ticino catchments (Fig. 1). The model choice is justified by the fact
 that ``from the hydrological point of view of spatially distributed
 catchment modelling, this model represents the state-of-the-art'' and
 that it ``can be successfully applied to a wide range of scales''. 
-WaSiM-ETH has also been applied to assess future soil water
+WaSiM has also been applied to assess future soil water
 patterns \citep{Jasper2006,Rossler2012} and future summer evapotranspiration
 regimes \citep{Calanca2006}. It was even applied for the entire Rhine
 basin at a 1 km\textsuperscript{2} resolution down to Rotterdam
@@ -592,7 +592,7 @@ Overall, studies on the impact of vegetation changes remain extremely
 rare in Switzerland; examples include the analysis of forest change
 by \citet{zierl05} with the ecohydrologic model RHESSys (not further
 used in Switzerland), by \citet{Koplin2013} and \citet{Schattan2013} with
-PREVAH and by \citet{Alaoui2014} with WaSiM-ETH. The work
+PREVAH and by \citet{Alaoui2014} with WaSiM. The work
 of \citet{Milano2015a} with PREVAH is to date the only study accounting
 also for anthropogenic effects on future water stress. 
 
@@ -608,7 +608,7 @@ The question of how to model the effect of warming on snow accumulation
 and melt deserves special attention. Most hydrological models used in
 Switzerland rely on a simple temperature-index based snow routine. A
 more complex snow routine has been recently implemented in 
-WaSiM-ETH \citep{Thornton2019}. ALPINE3D, which is built on the
+WaSiM \citep{Thornton2019}. ALPINE3D, which is built on the
 physically-based SNOWPACK model (\citealt{Lehning2002,Bartelt_2002,Bartelt2002,Lehning_2002}), 
 has certainly the most complex representation of snow processes among Swiss 
 models and has been used in several climate change impact
@@ -654,7 +654,7 @@ vulnerability of Alpine ecosystems to climate change \citep{Mastrotheodoros2019}
 
 Similarly, there are very few studies on agricultural water use, a topic
 that will gain importance in the future, but that might not further
-drive model diversification. For example, WaSiM-ETH has already been
+drive model diversification. For example, WaSiM has already been
 shown to be suitable to study the demand and supply of water for
 agriculture, including irrigation \citep{Fuhrer2012}. Besides,
 internationally widely used models might see more applications in
@@ -710,9 +710,9 @@ of soil moisture and evapotranspiration \citep{Zappa2003} and of snow
 
 More complex models are rarely used in this context due to computational
 constraints. Examples include the work of \citet{Cullmann2011}, which
-used WaSiM-ETH to compare the efficiency of different methods for
+used WaSiM to compare the efficiency of different methods for
 parameter estimation, or the work of \citet{Rossler2019}, which also
-used WaSiM-ETH to compare various climate postprocessing methods and
+used WaSiM to compare various climate postprocessing methods and
 quantify their impact on different hydrological signatures. 
 
 Overall, there are only very few parameter regionalisation studies; one
@@ -785,7 +785,7 @@ Information). Excluding the large scale applications (Section \ref{sec:applicati
 Swiss hydrological model (category D or E in Table 1) is selected in
 93\% of cases, leaving little room for international models. PREVAH
 takes the lion's share with about 30\% of the applications, followed by
-HBV-light (16.5\%) and WaSiM-ETH (14.6\%). The most used international
+HBV-light (16.5\%) and WaSiM (14.6\%). The most used international
 model is SWAT with a small 4\% usage (7 cases), mainly related to
 research led from outside Switzerland. An analysis of the temporal
 evolution of model use (Fig. \ref{fig:bars})
@@ -847,7 +847,7 @@ representation or that need a gridded spatial structure to provide
 gridded output, e.g. in view of coupling to another model. RS
 specifically targets flood modelling and hydropower operations, as it
 was designed for operational flood mitigation with hydropower plants.
-The three most used models, i.e. PREVAH, HBV-light and WaSiM-ETH, are
+The three most used models, i.e. PREVAH, HBV-light and WaSiM, are
 general models and are applied to different topics, such as climate
 change impact studies, floods, droughts, cryosphere-related processes,
 and operational forecasting (Fig. \ref{fig:applications}).
@@ -1212,13 +1212,13 @@ different land-use types and elevation is handled via statistical
 distributions. Routing must be performed separately with an additional
 routine taking care of the water transport between cells.
 
-\textbf{WaSiM-ETH} (Water Flow and Balance Simulation
-Model-ETH; \citealp{Schulla2007,Schulla2009}) is a fully distributed hydrological
-model originally developed at ETH Zurich. It describes the water fluxes
+\textbf{WaSiM} (Water Flow and Balance Simulation
+Model; \citealp{Schulla2007,Schulla2009}) is a fully distributed hydrological
+model originally developed at ETH Zurich under the name WaSiM-ETH. It describes the water fluxes
 in the unsaturated soil using the 1D-Richards
 equation \citep{Richards1931}. The transfer function (runoff
 concentration) can be processed through a series of linear reservoirs or
-with the kinematic wave approach (from one cell to another). WaSiM-ETH
+with the kinematic wave approach (from one cell to another). WaSiM
 covers a wide range of hydrological processes relevant for alpine
 environments, with different implemented variants.
 
