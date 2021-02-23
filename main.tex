@@ -32,6 +32,9 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 
+\def\preprint{}
+
+
 \PassOptionsToPackage{hyphens}{url}
 \usepackage[colorlinks = true,
 linkcolor = blue,
@@ -104,6 +107,16 @@ anchorcolor = blue]{hyperref}
  \date{}
 
 
+\ifdefined\preprint
+\setcounter{page}{0}
+\hrulefill
+
+This manuscript has been submitted for publication in \textbf{WIREs Water}. Please note that it has not been peer reviewed and has not yet been accepted for publication. Subsequent versions of this manuscript may have different content. If accepted, the final version of this manuscript will be available via the ‘Peer-reviewed Publication DOI’ link on the right-hand side of this webpage. Please feel free to contact any of the authors; we welcome feedback
+
+\hrulefill
+\newpage
+\fi
+
 \begingroup
 %\let\center\flushleft
 %\let\endcenter\endflushleft
@@ -111,8 +124,6 @@ anchorcolor = blue]{hyperref}
 \endgroup
 
 
-%This is a preprint of a manuscript submitted to WIREs Water.
-%\newpage
 
 
 \begin{abstract}
