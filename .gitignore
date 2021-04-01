@@ -5,7 +5,6 @@
 *.out
 *.gz
 main.pdf
-
 supplementary_material/supplementary_material.pdf
-
-corrections/
+resources/corrections/
+resources/old versions
