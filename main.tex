@@ -162,6 +162,19 @@ A hydrological model is an input-output model that simulates the evolution of wa
 
 The information sources considered in this analysis are as far as possible peer-reviewed articles with applications to hydrology. The articles were retrieved based on searches by authors (hydrologists in Switzerland) and keywords. While we tried to search all applications as exhaustively as possible, biases in the search and citing network effects are possible if not likely. Where necessary, conference proceedings, PhD theses, research and government reports are also included. A few models are exclusively used or developed in engineering companies, and these are not included here. Furthermore, our analysis focuses on catchment-scale modelling and excludes studies that focus on hydrogeological modelling \citep{Carlier2019} and those with a focus on urban hydrology \citep{Peleg2017} or urban hydrogeology \citep{schirmer2013}. All articles are not directly referenced in this paper, but a complete table is available in the supplementary material.
 
+
+\subsection{History of hydrological modelling in Switzerland}
+\label{sec:models:history}
+
+The early times of hydrological modelling in Switzerland can be situated in the years 1970 to 1990, when model diversity naturally emerged in response to modelling needs. From a hydrological processes perspective, a strong focus was on the simulation of snowmelt runoff \citep{braun1986} as well as on understanding the role of forests in the water cycle \citep{keller1991,forster1989}. Along with modelling studies in experimental catchments \citep{Iorgulescu1994}, first model-based climate change \citep{bultot1992a} and land-use change \citep{jordan1990a} impact studies appeared. Quantitative real-time forecasts for water resources management \citep{p1969} and hydropower production \citep{jensenlang1973} started being based on hydrologic models rather than statistical approaches.
+
+It is worth noting that \citet{naef1977} presented already a first model intercomparison study, comparing complex and simple models. In fact, model diversity already started interpellating the research community in the late 1970ties and \citet{f1981} notably asked: ``But, given that the results are good, why do new models continue to be published?'' 
+
+From a historical analysis (see Supplementary Information), one interesting aspect can be retained: already in the early times of model development, part of the model diversity resulted from the work of geoscientists and engineers not directly specialized in catchment hydrology \citep{Abednego1990,k1986a,hager1984,sautier1980}, which partly explains the parallel emergence of similar models. 
+
+Additional details on the emergence of hydrological modelling in Switzerland are given in the Supporting Information. For a more general dive into the history of modelling, the reader is referred to the work of Keith Beven \citep{Beven_2020,Beven_2020a}.
+
+
 \subsection{Model overview}
 \label{sec:models:overview}
 
@@ -170,7 +183,7 @@ There are several hydrological models that have been developed in Switzerland (T
 All these models are briefly described in Appendix 1. Switzerland being an Alpine country, most of these models include a representation of snow accumulation and melt, some also include glacier-related processes.
 
 
-\hspace{-4cm}\begin{deluxetable}{l l l c}
+\hspace{-4cm}\begin{deluxetable}{l l l c}[htb]
 	\vskip4mm
 	\centering
 	\tabletypesize{\footnotesize}
@@ -205,29 +218,11 @@ All these models are briefly described in Appendix 1. Switzerland being an Alpin
 \end{deluxetable}
 
 
-\subsection{History of hydrological modelling in Switzerland}
-\label{sec:models:history}
 
-The early times of hydrological modelling in Switzerland can be situated in the years 1970 to 1990, when model diversity naturally emerged in response to modelling needs. From a hydrological processes perspective, a strong focus was on the simulation of snowmelt runoff \citep{braun1986} as well as on understanding the role of forests in the water cycle \citep{keller1991,forster1989}. Along with modelling studies in experimental catchments \citep{Iorgulescu1994}, first model-based climate change \citep{bultot1992a} and land-use change \citep{jordan1990a} impact studies appeared. Quantitative real-time forecasts for water resources management \citep{p1969} and hydropower production \citep{jensenlang1973} started being based on hydrologic models rather than statistical approaches.
-
-It is worth noting that \citet{naef1977} presented already a first model intercomparison study, comparing complex and simple models. In fact, model diversity already started interpellating the research community in the late 1970ties and \citet{f1981} notably asked: ``But, given that the results are good, why do new models continue to be published?'' 
-
-From a historical analysis (see Supplementary Information), one interesting aspect can be retained: already in the early times of model development, part of the model diversity resulted from the work of geoscientists and engineers not directly specialized in catchment hydrology \citep{Abednego1990,k1986a,hager1984,sautier1980}, which partly explains the parallel emergence of similar models. 
-
-Additional details on the emergence of hydrological modelling in Switzerland are given in the Supporting Information. For a more general dive into the history of modelling, the reader is referred to the work of Keith Beven \citep{Beven_2020,Beven_2020a}.
-
-\subsection{Model intercomparison}
-\label{sec:models:intercomparison}
-
-The World Meteorological Organization (WMO) used to carry out comparisons of hydrological models and to publish the results in Operational hydrology reports. Different international models were compared over various catchments, including the Dischma basin in Switzerland. The Snowmelt Runoff Model \citep[SRM,][see supplementary material]{martinec1975} has also been assessed in these early model comparisons \citep{WMO1986, WMO1992}.
-
-However, there are few model intercomparison studies in Switzerland, and none of them led to a preference of one model over the other, which is reflected in the fact that the recent re-evaluation of climate change impact on water resources involved all the major models developed in Switzerland  \citep{bafu2021}. The existing model intercomparison studies are classical studies on what we can gain from model complexity in terms of model performance; e.g. \citet{Gurtz2003} compared PREVAH to WaSiM-ETH, \citet{Orth2015} HBV-light to PREVAH and a simple water balance model, \citet{Kobierska_2013} ALPINE3D to PREVAH and \citet{Andrianaki2019} SWAT to ALPINE3D and PREVAH.
-
-
-\section{Fields of model application and drivers of diversity}
+\section{Diversity drivers from applications}
 \label{sec:application}
 
-To structure the analysis of model diversity, we attempt here a clustering of modelling studies according to the underlying application. We propose a focus on the following categories of applications or research areas that have received signification attention in Switzerland (Fig. \ref{fig:map}): hydrologic process research (Section \ref{sec:application:process}), real-time forecasting  (Section \ref{sec:application:forecasting}), characterization and  quantification of floods (Section \ref{sec:application:floodsdroughts}),  climate change impact analysis (Section \ref{sec:application:climatechange}),  ecohydrology and agricultural water use (Section \ref{sec:application:echohydrology}), sediment production and transport (Section \ref{sec:application:sediment}), analysis of model behaviour and uncertainty analysis (Section \ref{sec:application:uncertainty}) and large scale modelling (Section \ref{sec:application:largescale}).
+The alpine environment provides a system that is complex to model with specific processes. The development of models in Switzerland have been driven by these particular characteristics that influence the hydrological cycle in a substantial way. We attempt here a clustering of modelling studies according to the underlying application and related processes in various Swiss catchments (Fig. \ref{fig:map}).
 
 \begin{figure}[htb]
 	\begin{center}
@@ -237,10 +232,55 @@ To structure the analysis of model diversity, we attempt here a clustering of mo
 	\end{center}
 \end{figure}
 
-\subsection{Hydrologic process research}
-\label{sec:application:process}
 
-Very few studies use catchment-scale hydrological models to assist hydrological process research and hypothesis testing within a hydrologic model development framework \citep{clarkOpinion2016}. This might be explained by the fact that it remains highly challenging to draw conclusions on hydrological processes based on model simulations at the catchment scale; corresponding work rather involves small scale modelling at the hillslope scale (e.g. the study of \citealt{Heuvel2018} from the US).  
+\subsection{Alpine topography}
+\label{sec:application:topography}
+
+Alpine environments are primarily characterized by a strong topography, and thus large elevation ranges. The large variability of local conditions such as slope, orientation, and elevation, is likely a driver for an increased spatial resolution in hydrological models compared to countries with more gentle topography. Indeed, most models used and developed in Switzerland are semi-distributed of even fully distributed. Very few applications rely on lumped models.
+
+A first effect of the topography is on meteorological forcing, for example through orographic impacts on precipitation with specific spatial patterns related to the orientation of the air flow toward the mountain reach, and precipitation gradients with altitude. The air temperature is also varying strongly with altitude, which has an impact on the type of precipitation and on processes related to the cryosphere. For this reason, some semi-distributed models such as GSM-SOCONT and HBV-light have a discretization in elevation bands. Finally, the spatial distribution of solar radiation depends on the slope orientation and is also greatly affected by the topography with substantial shading effects.
+
+
+- slope processes ?
+
+
+\subsection{Glaciers}
+\label{sec:application:glaciers}
+
+
+\subsection{Snow processes}
+\label{sec:application:snow}
+
+
+\subsection{Hydraulic infrastructures and hydropower operations}
+\label{sec:application:infrastructures}
+
+
+\subsection{Sediment production and transport}
+\label{sec:application:sediments}
+
+A special topic that deserves some focus is sediment transport modelling. The modelling of sediment sources, as well as transport capacity, requires models that yield reliable spatial patterns of hydrological processes, i.e. distributed models such as TOPKAPI-ETH, which has been modified to account for river bed erosion and deposition processes using a sub-grid modelling scheme \citep{Konz2011}. This modification allows the simulation of erosion and deposition patterns, sediment transport rates, and evolution of the channel slope. \citet{Battista2020a} later developed a new soil erosion and sediment transport module for TOPKAPI-ETH. They investigate the effects of precipitation and surface erodibility and their spatial variability on sediment fluxes. This new module was then used by \citet{Battista2020} to analyze the role of localized sediment sources, such as incised areas and landslides. They conclude that accounting for localized sediment sources improves sediment transport modelling and allows sediment sampling optimization and support of sediment provenance studies.
+
+Sediment management, for example in the context of hydropower production \citep{RaymondPralong2015,Gabbud2016}, is constantly gaining importance in Alpine countries and will most likely drive the development of new modules to simulate the interplay of hydrological and geomorphological processes at the catchment scale. In Switzerland, climate change is expected to decrease the sediment yield in average due to reduced runoff in summer, and to shift the sediment transport regime to earlier months \citep{RaymondPralong2015}. PREVAH has been used for this last analysis.
+
+
+\subsection{Ecohydrology and water quality}
+\label{sec:application:ecohydrology}
+
+Ecohydrology studies the feedbacks between ecosystems, in particular with vegetation and the water cycle \citep{tague200}. To date, catchment-scale studies with ecohydrological models accounting for feedback with vegetation are scarce in Switzerland. An early example is a work of \citet{zierl05}, who used the model RHESSys to study climate and land-use change impacts on alpine streamflow in Switzerland. Later, \citet{Fatichi2012,Fatichi2012a} developed an ecohydrological model, called Tethys-Chloris (T\&C) to simulate vegetation-hydrology interactions at large scales. It has been applied to catchments in Switzerland to study soil moisture spatiotemporal dynamics \citep{Fatichi2015a}, as well as to assess the vulnerability of Alpine ecosystems to climate change \citep{Mastrotheodoros2019}.
+
+Water quality is also likely to become a growing concern, which will lead to an increase in studies on transport of chemicals \citep{queloz2015}, nutrients and pollutants, on C0\textsubscript{2} production or water temperature \citep{michel2020}. Water quality and nutrient loads in the Thur catchment have been modeled by \citet{Abbaspour2007} using SWAT. The objective of the study was to test the performance of the model for such application. They concluded that "in watersheds similar to Thur – with good data quality and availability and relatively small model uncertainty – it is feasible to use SWAT as a flow and transport simulator". Another approach consists in coupling ecosystem models to distributed hydrological models, such a TOPKAPI-ETH \citep{Pappas2015}.
+
+
+\subsection{Agricultural water use and impacts}
+\label{sec:application:agriculture}
+
+There are very few studies on agricultural water use, a topic that will likely gain importance in the future, but that might not further drive model diversification. For example, WaSiM has already been shown to be suitable to study the demand and supply of water for agriculture, including irrigation \citep{Fuhrer2012}. Besides, internationally widely used models might see more applications in Switzerland. One such example is SWAT, which - given its user-friendliness \citep{Abbaspour2007} - is likely to see more alpine applications despite not being specifically designed for alpine environments \citep{Rahman2014, Andrianaki2019}, but in exchange offers the option to study land management effects \citep{Zarrineh2018} or the joint effect of land use and climate change \citep{Rahman2015}. SWAT was also applied by \citet{Zarrineh2020} to an agricultural region in Western Switzerland to assess the impact of climate change on streamflow, erosion, and agriculture.
+
+
+
+\section{------------}
+
 
 One example is the work of \citet{Comola2017} that analyzes how solar radiation patterns influence the snow-hydrologic response based on two models of different complexity (ALPINE3D and SEHR-ECHO). ALPINE3D was also used by \citet{Hindshaw2011} to attribute the origin of systematic seasonal and diurnal variations in glacial stream water chemistry, and by \citet{Brauchli2017} to assess the influence of small-scale snowmelt variations on the catchment-scale hydrologic response.
 
@@ -251,7 +291,7 @@ Although there are currently few studies of this type, this topic holds potentia
 \subsection{Real-time forecasting}
 \label{sec:application:forecasting}
 
-The ever increasing need for reliable real-time streamflow forecasts leads to a continuous evolution of the underlying hydro-meteorological modelling systems. Real-time forecasting started with deterministic forecasts from a single meteorological forecast applied to a single hydrological model; today, users expect full stochastic ensemble forecasts at hourly time scales, updated every few hours and with several stochastic meteorological inputs applied to different hydrological models \citep{Karsten2016}. Coupled atmospheric--hydrologic ensemble prediction systems were proven to provide better forecasts than deterministic simulations \citep{Verbunt2007,Zappa2008,Jaun2008a,Liechti2013}. These might also include data assimilation schemes \citep{J_rg_Hess_2015} or the assessment of hydrologic uncertainty related to meteorological forcings, model parameters and initial conditions \citep{Zappa2011a,Fundel2011}.
+The ever increasing need for reliable real-time streamflow forecasts leads to a continuous evolution of the underlying hydro-meteorological modelling systems. Real-time forecasting started with deterministic forecasts from a single meteorological forecast applied to a single hydrological model; today, users expect full stochastic ensemble forecasts at hourly time scales, updated every few hours and with several stochastic meteorological inputs applied to different hydrological models \citep{Karsten2016}. Coupled atmospheric--hydrologic ensemble prediction systems were proven to provide better forecasts than deterministic simulations \citep{Verbunt2007,Zappa2008,Jaun2008,Liechti2013}. These might also include data assimilation schemes \citep{J_rg_Hess_2015} or the assessment of hydrologic uncertainty related to meteorological forcings, model parameters and initial conditions \citep{Zappa2011a,Fundel2011}.
 
 Such modern forecasting systems require hydrological models that provide forecasts at many locations in a stream network, that are fast to run, and that include the effect of hydraulic infrastructures (eg. of hydropower water intakes and accumulation lakes). Since the early times of flood forecasting, HBV and PREVAH were used in governmental offices \citep{Karsten2016} as well as in research institutes because of their relative simplicity and low computational costs \citep{Verbunt2006,Addor_2011,Murphy_2019,Antonetti2019}.
 
@@ -291,8 +331,6 @@ TOPKAPI-ETH, the other frequently used complex distributed model has also been u
 
 The justification of these models for climate change impact assessments is well summarized by \citet{K_plin_2010} who, for PREVAH, states that the model ``has been developed especially to suit conditions in mountainous environments'' and that it ``has proved to be a reliable and flexible tool for various scopes of application and climate conditions ranging from drought analysis over water balance modelling to flood estimation and forecasting''. 
 
-It is in the context of climate change impact studies that we see for the first time the use of an internationally well-established model, the SWAT model, with an application to the Upper Rhone river catchment \citep{Rahman2014}. SWAT was not specifically designed for Alpine environments, but it provides the interesting possibility to study the impact of vegetation-related land-use changes \citep{Rahman2015}. Later on, SWAT was also applied by \citet{Zarrineh2020} to an agricultural region in Western Switzerland to assess the impact of climate change on streamflow, erosion, and agriculture.
-
 Overall, studies on the impact of vegetation changes remain extremely rare in Switzerland; examples include the analysis of forest change by \citet{zierl05} with the ecohydrologic model RHESSys (not further used in Switzerland), by \citet{Koplin2013} and \citet{Schattan2013} with PREVAH and by \citet{Alaoui2014} with WaSiM. The work of \citet{Milano2015a} with PREVAH is to date the only study accounting also for anthropogenic effects on future water stress. 
 
 There is, however, an ample body of literature on the study of glacier retreat impacts on hydrology, which can be seen as a land-use change effect \citep{Horton2006,Schaefli2007b,Finger2015,Etter2017,Addor2014,Junghans2011}.  This namely gave rise to the development of the GERM model \citep{Huss2016,Junghans2011,Farinotti2012,Finger2013}  and a new glacier retreat parameterization scheme widely applied internationally \citep{Huss2010}.
@@ -301,21 +339,6 @@ The question of how to model the effect of warming on snow accumulation and melt
 
 In this context, we would like to stress here that there are still relatively few examples of hydrologic model ensembles (using several hydrologic models) for climate change impact assessment \citep{Kobierska2011,Addor2014}. The expectations in this regard might raise in the future, requiring the use of additional, and likely internationally widely applied, hydrological models.
 
-\subsection{Ecohydrology and agricultural water use}
-\label{sec:application:echohydrology}
-
-Ecohydrology studies the feedbacks between ecosystems, in particular with vegetation and the water cycle \citep{tague200}. To date, catchment-scale studies with ecohydrological models accounting for feedback with vegetation are scarce in Switzerland. An early example is a work of \citet{zierl05}, who used the model RHESSys to study climate and land-use change impacts on alpine streamflow in Switzerland. 
-
-This topic will gain importance in the future, e.g. to study transport phenomena of chemicals \citep{queloz2015}, nutrient and pollutant cycling, C0\textsubscript{2} production or water temperature \citep{michel2020}. In research, this might lead to increased use of complex, distributed models that can be coupled to ecosystem models, such a TOPKAPI-ETH \citep{Pappas_2015} or STREAMFLOW \citep{Gallice_2016}.
-
-Or, perhaps more likely, we will see the development of new models specifically targeted at vegetation-hydrology interactions, such as the one developed by \citet{Fatichi2012,Fatichi2012a} called Tethys-Chloris (T\&C) and developed to simulate vegetation-hydrology interactions at large scales. It has been applied to catchments in Switzerland to study soil moisture spatiotemporal dynamics \citep{Fatichi2015a}, as well as to assess the vulnerability of Alpine ecosystems to climate change \citep{Mastrotheodoros2019}.
-
-Similarly, there are very few studies on agricultural water use, a topic that will gain importance in the future, but that might not further drive model diversification. For example, WaSiM has already been shown to be suitable to study the demand and supply of water for agriculture, including irrigation \citep{Fuhrer2012}. Besides, internationally widely used models might see more applications in Switzerland. One such example is SWAT (e.g. \citealt{Abbaspour2007} ), which - given its user-friendliness - is likely to see more alpine applications despite not being specifically targeted to alpine environments \citep{Andrianaki2019}, but in exchange offers the option to study land management effects \citep{Zarrineh2018}.
-
-\subsection{Sediment production and transport}
-\label{sec:application:sediment}
-
-A special topic that deserves some focus is sediment transport modelling. The modelling of sediment sources, as well as transport capacity, requires models that yield reliable spatial patterns of hydrological processes, i.e. complex distributed models such as TOPKAPI-ETH, which is being extended for this purpose \citep{Konz_2011,Battista2020}. Sediment management, for example in the context of hydropower production \citep{RaymondPralong2015,Gabbud2015}, is constantly gaining importance in Alpine countries and will most likely drive the development of new modules to simulate the interplay of hydrological and geomorphological processes at the catchment scale.
 
 \subsection{Analysis of model behaviour and uncertainty analysis}
 \label{sec:application:uncertainty}
@@ -343,7 +366,7 @@ Several other models have been applied specifically for the Rhine basin, mainly 
 
 In general, the skill of most large scale models is found to be inferior near the main Alpine ridge compared to mountainous or lowland areas. The high Alpine catchments have been identified early as posing a major challenge to large scale hydrological modelling \citep{Kleinn_2005}.  Besides larger errors in the meteorological variables (precipitation in particular), and the important effect of water management practices, the smaller the catchment area and the greater the elevation ranges, the more detailed the model structure and the spatial resolution need to be to achieve good model performances \citep{Gurtz2003}. While most likely being cancelled out downstream \citep{Kleinn_2005}, these problems remain yet to be addressed in large scale modelling and certainly partly explain why specific Swiss-scale models continue to be extremely popular. 
 
-\section{Disentangling the motivations behind the choices}
+\section{The motivations behind the model choice}
 \label{sec:motivations}
 
 In total, we reviewed 157 peer-reviewed journal articles on hydrological modelling in Swiss catchments (see Table 1 in the Supporting Information). Excluding the large scale applications (Section \ref{sec:application:largescale}), a Swiss hydrological model (category D or E in Table 1) is selected in 93\% of cases, leaving little room for international models. PREVAH takes the lion's share with about 30\% of the applications, followed by HBV-light (16.5\%) and WaSiM (14.6\%). The most used international model is SWAT with a small 4\% usage (7 cases), mainly related to research led from outside Switzerland. An analysis of the temporal evolution of model use (Fig. \ref{fig:bars}) suggests a small opening to international models. The relatively higher peak in 2003 is mainly due to articles related to the MAP project (Mesoscale Alpine Programme).
@@ -363,7 +386,8 @@ In the articles analyzed here, about 25\% of the authors specifically address th
 \begin{figure}[htb]
 	\begin{center}
 		\includegraphics[width=0.70\columnwidth]{figures/chord_diagram_contexts}
-		\caption{{Hydrological models applied to different contexts in Switzerland. The importance of the link is proportional to the number of scientific articles. The importance of some models can be inflated by the fact that an article can address multiple contexts, such as floods and climate change. Models with too few use cases (less than three) are not included for the sake of clarity. A3D stands for ALPINE3D and G-SCNT for GSM-SOCONT. {\label{fig:applications}}
+		\caption{{Hydrological models applied to different contexts in Switzerland. The importance of the link is proportional to the number of scientific articles. The importance of some models can be inflated by the fact that an article can address multiple contexts, such as floods and climate change. Models with too few use cases (less than three) are not included for the sake of clarity. A3D stands for ALPINE3D and G-SCNT for GSM-SOCONT. 
+		{\label{fig:applications}}
 		}}
 	\end{center}
 \end{figure}
@@ -371,7 +395,8 @@ In the articles analyzed here, about 25\% of the authors specifically address th
 \begin{figure}[htb]
 	\begin{center}
 		\includegraphics[width=0.70\columnwidth]{figures/chord_diagram_institutes}
-		\caption{{Hydrological models ...... {\label{fig:model_institutes}}
+		\caption{{Links between hydrological models and the Swiss institutes that use them. Same conventions as Fig. \ref{fig:applications}. Models or institutes with too few use cases are not included.
+		{\label{fig:model_institutes}}
 		}}
 	\end{center}
 \end{figure}
@@ -387,6 +412,16 @@ Another reason is the selection of the model that is developed and used at the r
 While we see an impressive model diversity at the single or few catchments scale, it is noteworthy that our review points towards an important national-scale shortcoming: while there are catchments that have been ``over-modelled'' (e.g. Thur, Dischma) - however with little model intercomparison - there is a clear lack of large scale or national studies. In particular, the few available studies often do not cross the Swiss national border, even though the ``hydrological Switzerland'' extends to its neighbouring countries (Fig. \ref{fig:map}).
 
 The absence of such larger scale studies might be explained by shortcomings and challenges more widely encountered in hydrological modelling over larger domains. These include differing quality and scales of input data and streamflow observations and large heterogeneity in hydrological behaviour (possibly requiring more than one specialized model). Yet, this heterogeneity may in fact provide us with the opportunity to improve our understanding of differences in model adequacy and model performance, and to draw most needed conclusions on the robustness of generalizations and on estimation uncertainty \citep{Gupta_2014,McMillan_2016}.
+
+
+\section{On model structural uncertainty and multi-model approaches}
+\label{sec:multi-model}
+
+The World Meteorological Organization (WMO) used to carry out comparisons of hydrological models and to publish the results in Operational hydrology reports. Different international models were compared over various catchments, including the Dischma basin in Switzerland. The Snowmelt Runoff Model \citep[SRM,][see supplementary material]{martinec1975} has also been assessed in these early model comparisons \citep{WMO1986, WMO1992}.
+
+However, there are few model intercomparison studies in Switzerland, and none of them led to a preference of one model over the other, which is reflected in the fact that the recent re-evaluation of climate change impact on water resources involved all the major models developed in Switzerland  \citep{bafu2021}. The existing model intercomparison studies are classical studies on what we can gain from model complexity in terms of model performance; e.g. \citet{Gurtz2003} compared PREVAH to WaSiM-ETH, \citet{Orth2015} HBV-light to PREVAH and a simple water balance model, \citet{Kobierska_2013} ALPINE3D to PREVAH and \citet{Andrianaki2019} SWAT to ALPINE3D and PREVAH.
+
+Very few studies use catchment-scale hydrological models to assist hydrological process research and hypothesis testing within a hydrologic model development framework \citep{clarkOpinion2016}. This might be explained by the fact that it remains highly challenging to draw conclusions on hydrological processes based on model simulations at the catchment scale; corresponding work rather involves small scale modelling at the hillslope scale (e.g. the study of \citealt{Heuvel2018} from the US).  
 
 
 \section{Conclusion}
