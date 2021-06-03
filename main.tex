@@ -222,7 +222,10 @@ All these models are briefly described in Appendix 1. Switzerland being an Alpin
 \section{Diversity drivers from applications}
 \label{sec:application}
 
-The alpine environment provides a system that is complex to model with specific processes. The development of models in Switzerland have been driven by these particular characteristics that influence the hydrological cycle in a substantial way. We attempt here a clustering of modelling studies according to the underlying application and related processes in various Swiss catchments (Fig. \ref{fig:map}).
+The alpine environment is a complex system with specific processes that play a dominant role in the hydrological cycle. For that reason, the choice and the development of models have to be influenced by the main natural processes that need to be correctly represented as well as the characteristics of such environment. For example, PREVAH is presented by \citet{Anghileri2019} as being “specifically designed to capture hydrological processes that are important for catchments in complex terrain”, and multiple similar statements can be found in the literature \citep{Verbunt2007, Zappa2007, Koplin2010,  Brunner2019e}. This is also true for other models such as WaSiM \citep{Jasper2002, Jasper2003, Thornton2021} or HBV-light \citep{Sikorska-Senoner2020}. The great variability of local conditions in alpine environments, such as slope, orientation and elevation, is likely a driver for an increased spatial resolution in hydrological models compared to countries with more gentle topography. Indeed, most models used and developed in Switzerland are semi-distributed of fully distributed. Very few applications rely on lumped models.
+
+While natural processes and characteristics of the landscape have an impact on model selection and development, the context of the model application can also have a role, for example in terms of computing efficiency for climate change studies on long periods, or data assimilation for operational forecasting. We attempt here a clustering of modelling studies according to the underlying application and related processes or contexts in various Swiss catchments (Fig. \ref{fig:map}).
+
 
 \begin{figure}[htb]
 	\begin{center}
@@ -233,30 +236,46 @@ The alpine environment provides a system that is complex to model with specific 
 \end{figure}
 
 
-\subsection{Alpine topography}
-\label{sec:application:topography}
+\subsection{Process-driven influences}
+\label{sec:application:processes}
 
-Alpine environments are primarily characterized by a strong topography, and thus large elevation ranges. The large variability of local conditions such as slope, orientation, and elevation, is likely a driver for an increased spatial resolution in hydrological models compared to countries with more gentle topography. Indeed, most models used and developed in Switzerland are semi-distributed of even fully distributed. Very few applications rely on lumped models.
-
-A first effect of the topography is on meteorological forcing, for example through orographic impacts on precipitation with specific spatial patterns related to the orientation of the air flow toward the mountain reach, and precipitation gradients with altitude. The air temperature is also varying strongly with altitude, which has an impact on the type of precipitation and on processes related to the cryosphere. For this reason, some semi-distributed models such as GSM-SOCONT and HBV-light have a discretization in elevation bands. Finally, the spatial distribution of solar radiation depends on the slope orientation and is also greatly affected by the topography with substantial shading effects.
+Topography has a strong impact on meteorological forcing, for example through orographic effects on precipitation with specific spatial patterns related to the orientation of the air flow toward the mountain reach, and precipitation gradients with altitude. The air temperature is also varying strongly with altitude, which has an impact on the type of precipitation and on processes related to the cryosphere. For this reason, some semi-distributed models such as GSM-SOCONT and HBV-light have a discretization in elevation bands. Finally, the spatial distribution of solar radiation depends on the slope orientation and is also greatly affected by the topography with substantial shading effects (see Sect. \ref{sec:application:snow}).
 
 
-- slope processes ?
-
-
-\subsection{Glaciers}
+\subsubsection{Glaciers}
 \label{sec:application:glaciers}
 
 
-\subsection{Snow processes}
+
+
+--------
+
+\citet{Ancey2019} reconstructed the 1818 Giétro glacial lake outburst flood with GERM (which was also ready to use for this area).
+
+\subsubsection{Snow processes}
 \label{sec:application:snow}
 
 
-\subsection{Hydraulic infrastructures and hydropower operations}
+
+
+----------
+
+One example is the work of \citet{Comola2015a} that analyzes how solar radiation patterns influence the snow-hydrologic response based on two models of different complexity (ALPINE3D and SEHR-ECHO).
+
+
+\subsubsection{Hydraulic infrastructures and hydropower operations}
 \label{sec:application:infrastructures}
 
 
-\subsection{Sediment production and transport}
+
+---------
+
+\citet{Stucki2018} reconstructed a large flood of the 19th Century in Ticino with PREVAH coupled with the routing part of RS 
+
+Before the recent implementation in WaSiM and in TOPKAPI-ETH, RS MINERVE was the only operational tool that explicitly modelled the effect of lakes and hydraulic infrastructures.
+  
+
+\subsubsection{Sediment production and transport}
 \label{sec:application:sediments}
 
 A special topic that deserves some focus is sediment transport modelling. The modelling of sediment sources, as well as transport capacity, requires models that yield reliable spatial patterns of hydrological processes, i.e. distributed models such as TOPKAPI-ETH, which has been modified to account for river bed erosion and deposition processes using a sub-grid modelling scheme \citep{Konz2011}. This modification allows the simulation of erosion and deposition patterns, sediment transport rates, and evolution of the channel slope. \citet{Battista2020a} later developed a new soil erosion and sediment transport module for TOPKAPI-ETH. They investigate the effects of precipitation and surface erodibility and their spatial variability on sediment fluxes. This new module was then used by \citet{Battista2020} to analyze the role of localized sediment sources, such as incised areas and landslides. They conclude that accounting for localized sediment sources improves sediment transport modelling and allows sediment sampling optimization and support of sediment provenance studies.
@@ -264,7 +283,7 @@ A special topic that deserves some focus is sediment transport modelling. The mo
 Sediment management, for example in the context of hydropower production \citep{RaymondPralong2015,Gabbud2016}, is constantly gaining importance in Alpine countries and will most likely drive the development of new modules to simulate the interplay of hydrological and geomorphological processes at the catchment scale. In Switzerland, climate change is expected to decrease the sediment yield in average due to reduced runoff in summer, and to shift the sediment transport regime to earlier months \citep{RaymondPralong2015}. PREVAH has been used for this last analysis.
 
 
-\subsection{Ecohydrology and water quality}
+\subsubsection{Ecohydrology and water quality}
 \label{sec:application:ecohydrology}
 
 Ecohydrology studies the feedbacks between ecosystems, in particular with vegetation and the water cycle \citep{tague200}. To date, catchment-scale studies with ecohydrological models accounting for feedback with vegetation are scarce in Switzerland. An early example is a work of \citet{zierl05}, who used the model RHESSys to study climate and land-use change impacts on alpine streamflow in Switzerland. Later, \citet{Fatichi2012,Fatichi2012a} developed an ecohydrological model, called Tethys-Chloris (T\&C) to simulate vegetation-hydrology interactions at large scales. It has been applied to catchments in Switzerland to study soil moisture spatiotemporal dynamics \citep{Fatichi2015a}, as well as to assess the vulnerability of Alpine ecosystems to climate change \citep{Mastrotheodoros2019}.
@@ -272,51 +291,59 @@ Ecohydrology studies the feedbacks between ecosystems, in particular with vegeta
 Water quality is also likely to become a growing concern, which will lead to an increase in studies on transport of chemicals \citep{queloz2015}, nutrients and pollutants, on C0\textsubscript{2} production or water temperature \citep{michel2020}. Water quality and nutrient loads in the Thur catchment have been modeled by \citet{Abbaspour2007} using SWAT. The objective of the study was to test the performance of the model for such application. They concluded that "in watersheds similar to Thur – with good data quality and availability and relatively small model uncertainty – it is feasible to use SWAT as a flow and transport simulator". Another approach consists in coupling ecosystem models to distributed hydrological models, such a TOPKAPI-ETH \citep{Pappas2015}.
 
 
-\subsection{Agricultural water use and impacts}
+\subsubsection{Agricultural water use and impacts}
 \label{sec:application:agriculture}
 
 There are very few studies on agricultural water use, a topic that will likely gain importance in the future, but that might not further drive model diversification. For example, WaSiM has already been shown to be suitable to study the demand and supply of water for agriculture, including irrigation \citep{Fuhrer2012}. Besides, internationally widely used models might see more applications in Switzerland. One such example is SWAT, which - given its user-friendliness \citep{Abbaspour2007} - is likely to see more alpine applications despite not being specifically designed for alpine environments \citep{Rahman2014, Andrianaki2019}, but in exchange offers the option to study land management effects \citep{Zarrineh2018} or the joint effect of land use and climate change \citep{Rahman2015}. SWAT was also applied by \citet{Zarrineh2020} to an agricultural region in Western Switzerland to assess the impact of climate change on streamflow, erosion, and agriculture.
+
+
+\subsection{Context-driven influences}
+\label{sec:application:context}
+
+
+\subsubsection{Analysis of model behaviour and uncertainty analysis}
+\label{sec:application:uncertainty}
+
+
+\subsubsection{Characterization and quantification of floods and droughts}
+\label{sec:application:floodsdroughts}
+
+Infrastructure planning, water resources and natural risk management also heavily rely on probabilistic quantifications of extremes, i.e. an estimation of what could happen in terms of floods and droughts and their associated probabilities (called return periods in hydrology). Work in this field continues to be based on statistical analyses and extrapolation of observed streamflow time series \citep{Brunner2018, Asadi20108}, but hydrological models play an ever-increasing role to complement missing or insufficient streamflow data.
+
+Any model-based flood estimation method is computationally intensive since long model simulation runs are required at an hourly time step. Accordingly, simple models such as PREVAH \citep{Viviroli_2009, Viviroli2009c, Felder2017}, HBV-light \citep{Sikorska2017, Brunner_2019a, Sikorska-Senoner2020} and  RS \citep{Bieri2013, Zeimetz2017, Zeimetz2018} are often used for flood estimation; these models are all deemed to perform well enough for flood estimation in Swiss catchments by their respective authors and users. To bring diversity in the type of models used for flood modelling, the open-source DECIPHeR model is being futher developed and implemented for Swiss catchments (Kauzlaric, personal communication).
+
+Other more complex distributed models, such as WaSiM, are also used for flood modelling, for example in the case of a reconstruction of the 1816 Tambora eruption and its impact on floods in the upper Rhine basin \citep[see Fig. \ref{fig:map};][]{Rossler2018}, or the assessment of climate change impacts on floods characteristics \citep{Keller2019a}. Despite relatively long simulation time, their use can be highly relevant to study specific flood types that involve a good physical parameterization of small scale processes, such as rain-on-snow flood events, as in the study by \citet{Rossler2014}.
+
+Work on droughts is much less abundant in Switzerland than work on floods, which is related to the fact that missing water was, in the past, not a hot topic in this country known as the water tower of Europe \citep{Milano2015}. What can be highlighted here is that the same models are in use to assess droughts and floods, potentially with specific recalibration, but without modifying the model structure. This is motivated by the fact that existing models are deemed to reproduce well all dominant processes in the Swiss environment, as e.g. explicitly stated in the work of \citet{Zappa2007a} on quantifying the hydrological impact of the 2003 heatwave with a distributed version of PREVAH. It was also later on used for additional drought analyses \citep{Brunner2019e, Zappa2019}, where a spatial mismatch between water scarcity and storage availability has been highlighted for Switzerland \citep{Brunner2019e}. Similarly, HBV-light served in several drought studies, such as for the definition of a new drought index that accounts for snow \citep{Staudinger2014}, the predictability of low flows \citep{Staudinger2014a}, or the sensitivity of catchments to meteorological droughts \citep{Staudinger2015}. It was also used to assess low flow drivers in Alpine catchments \citep{Arnoux_2020}. However, significant efforts to improve the model representation of groundwater and the corresponding baseflow during droughts remain to be done in Switzerland, which will most probably lead to further model diversification.
+
+
+\subsubsection{Operational forecasting}
+\label{sec:application:forecasting}
+
+The ever increasing need for reliable real-time streamflow forecasts leads to a continuous evolution of the underlying hydro-meteorological modelling systems. Real-time forecasting started with deterministic forecasts from a single meteorological forecast applied to a single hydrological model; today, users expect full stochastic ensemble forecasts at hourly time scales, updated every few hours and with several stochastic meteorological inputs applied to different hydrological models \citep{Jasper2016}. Coupled atmospheric--hydrologic ensemble prediction systems were proven to provide better forecasts than deterministic simulations \citep{Verbunt2007, Zappa2008, Jaun2008, Liechti2013}. These might also include data assimilation schemes \citep{Jorg-Hess2015a} or the assessment of hydrologic uncertainty related to meteorological forcings, model parameters and initial conditions \citep{Jaun2009, Zappa2011a, Fundel2011}.
+
+Such modern forecasting systems require hydrological models that provide forecasts at many locations in a stream network, that are fast to run, and that include the effect of hydraulic infrastructures (eg. of hydropower water intakes and accumulation lakes). Since the early times of flood forecasting, HBV and PREVAH were used in governmental offices \citep{Jasper2016} as well as in research institutes because of their relative simplicity and low computational costs \citep{Verbunt2006, Addor_2011, Murphy_2019, Antonetti2019}. Along with HBV, PREVAH and LARSIM, WaSiM is today part of the Swiss operational ensemble forecasting system \citep{Jasper2016}, which uses the FEWS platform (Flood Early Warning System; \citealp{Werner_2013}) to provide forecasts for the cantonal authorities and the public \citep{FOEN2019}. A key advantage of the WaSiM model is the fact that it can explicitly account for lake regulations and hydropower operations (J. Schulla, personal communication, October 23, 2020). WaSiM has also been used for research studies on improving operational flood forecasting in mountainous areas \citep{Jasper2002, Jasper2003, Ahrens2003a, Ahrens2003b}.
+
+In parallel to the above-mentioned models, RS MINERVE is being used as a specific flood forecasting tool for the upper Rhone river catchment, a large catchment (5220 km\textsuperscript{2}, see Fig. \ref{fig:map}) strongly influenced by glacier melt and hydropower production \citep{GarciaHernandez2009b, GarciaHernandez2009, Jordan2010}. The model has been primarily developed for this application and has thus a specific module to simulate hydropower operations. Within this context, the interpolation of the meteorological forcings and the partitioning between rain and snowfall have been specifically improved \citep{Tobin2011, Tobin2012}. 
+
+Applications or studies of seasonal and subseasonal (lead times up to 4 to 6 weeks) streamflow forecasts are relatively scarce in Switzerland, but few applications using PREVAH exist \citep[][]{Monhart_2019, Anghileri2019}. PREVAH also plays a prominent role in drought forecasting \citep{Fundel2013, Jorg-Hess2015, Bogner2018b} and within the operational Swiss drought information platform (\citealp{Stahli2013}). 
+
+
+\subsubsection{Large scale modelling}
+\label{sec:application:largescale}
 
 
 
 \section{------------}
 
 
-One example is the work of \citet{Comola2017} that analyzes how solar radiation patterns influence the snow-hydrologic response based on two models of different complexity (ALPINE3D and SEHR-ECHO). ALPINE3D was also used by \citet{Hindshaw2011} to attribute the origin of systematic seasonal and diurnal variations in glacial stream water chemistry, and by \citet{Brauchli2017} to assess the influence of small-scale snowmelt variations on the catchment-scale hydrologic response.
+ALPINE3D was also used by \citet{Hindshaw2011} to attribute the origin of systematic seasonal and diurnal variations in glacial stream water chemistry, and by \citet{Brauchli2017} to assess the influence of small-scale snowmelt variations on the catchment-scale hydrologic response.
 
 Another example of model-assisted process research is the analysis of \citet{Paschalis_2014} with TOPKAPI-ETH on the interplay of rainfall's temporal variability and the clustering of saturated areas in flood generation.
 
 Although there are currently few studies of this type, this topic holds potential for significant model diversification since hydrologic process analysis might require model structural changes to allow new hypotheses to be tested. An example is given by \citet{DalMolin2020}, who discusses, based on the SUPERFLEX framework, how to flexibly adapt the model structure to integrate new hypotheses about dominant hydrological processes.
 
-\subsection{Real-time forecasting}
-\label{sec:application:forecasting}
 
-The ever increasing need for reliable real-time streamflow forecasts leads to a continuous evolution of the underlying hydro-meteorological modelling systems. Real-time forecasting started with deterministic forecasts from a single meteorological forecast applied to a single hydrological model; today, users expect full stochastic ensemble forecasts at hourly time scales, updated every few hours and with several stochastic meteorological inputs applied to different hydrological models \citep{Karsten2016}. Coupled atmospheric--hydrologic ensemble prediction systems were proven to provide better forecasts than deterministic simulations \citep{Verbunt2007,Zappa2008,Jaun2008,Liechti2013}. These might also include data assimilation schemes \citep{J_rg_Hess_2015} or the assessment of hydrologic uncertainty related to meteorological forcings, model parameters and initial conditions \citep{Zappa2011a,Fundel2011}.
-
-Such modern forecasting systems require hydrological models that provide forecasts at many locations in a stream network, that are fast to run, and that include the effect of hydraulic infrastructures (eg. of hydropower water intakes and accumulation lakes). Since the early times of flood forecasting, HBV and PREVAH were used in governmental offices \citep{Karsten2016} as well as in research institutes because of their relative simplicity and low computational costs \citep{Verbunt2006,Addor_2011,Murphy_2019,Antonetti2019}.
-
-PREVAH also plays a prominent role in drought forecasting \citep{Fundel2013,J_rg_Hess_2015,Bogner2018b} and within the operational Swiss drought information platform (\citealp{Stahli2013}). Furthermore, it is to date the only model used for subseasonal streamflow forecasts \citep{Monhart_2019,Anghileri2019}, which is still in its infancy in Switzerland.
-
-Despite the dominance of HBV and PREVAH, the considerably more complex WaSiM model has, however, also been used for research studies on improving flood forecasting in mountainous areas \citep{Jasper2003,Ahrens2003b,Jasper2002}. Along with HBV, PREVAH and LARSIM, WaSim is today part of the Swiss operational ensemble forecasting system \citep{Karsten2016}, which uses the FEWS platform (Flood Early Warning System; \citealp{Werner_2013}) to provide forecasts for the cantonal authorities and the public \citep{FOEN2019}. A key advantage of the computationally intensive WaSiM model is the fact that it can explicitly account for lake regulations and hydropower operations (J. Schulla, personal communication, October 23, 2020). 
-
-In parallel to the above-mentioned models, RS MINERVE is being used as a specific flood forecasting tool for the upper Rhone river catchment, a large catchment (5220 km\textsuperscript{2}, see Fig. \ref{fig:map}) strongly influenced by glacier melt and hydropower production \citep{GarciaHernandez2009b,GarciaHernandez2009,Jordan2010}.  Before the recent implementation in WaSiM and in TOPKAPI-ETH, RS MINERVE was the only operational tool that explicitly modelled the effect of lakes and hydraulic infrastructures.
-
-\subsection{Characterization and quantification of floods and droughts}
-\label{sec:application:floodsdroughts}
-
-Infrastructure planning, water resources and natural risk management also heavily rely on probabilistic quantifications of extremes, i.e. an estimation of what could happen in terms of floods and droughts and their associated probabilities (called return periods in hydrology). Work in this field continues to be based on statistical analyses and extrapolation of observed streamflow time series \citep{Brunner2018,Asadi20108}, but hydrological models play an ever-increasing role to complement missing or insufficient streamflow data.
-
-Any model-based flood estimation method is computationally intensive since long model simulation runs are required at an hourly time step. Accordingly, simple models such as PREVAH \citep{Viviroli_2009,Viviroli2009c,Felder2017}, HBV-light \citep{Brunner_2019a,Sikorska2017,Sikorska-Senoner2020} and  RS \citep{Zeimetz2018,Zeimetz2017,Bieri2013} dominate the Swiss literature on flood estimation; these models are all deemed to perform well enough for flood estimation in Swiss catchments by their respective authors and users. 
-
-However, given that all the above simple models rely on similar reservoir-based streamflow simulation methods, there is currently an important modelling effort by Kauzlaric (personal communication) to diversify flood estimation modelling for flood risk assessment, through the further development of the modular and open-source model DECIPHeR for Swiss catchments.
-
-Other complex distributed models are to date only used to study specific flood types that involve a good physical parameterization of small scale processes, such as rain-on-snow flood events, as in the study by \citet{Rossler2014} with WaSiM. 
-
-In addition to the above studies, there are also applications aiming at the reconstruction and/or reproduction of historical floods dating further in the past. The effect of a major volcanic eruption in 1816 on the generation of floods in the upper Rhine basin (see Fig. \ref{fig:map}) has been analysed by \citet{Rossler2018} using WaSiM. \citet{Stucki2018} reconstructed a large flood of the 19th Century in Ticino with PREVAH coupled with the routing part of RS (the model was chosen because it was already calibrated for the region by \citet{Andres_2016}). \citet{Ancey2019} reconstructed the 1818 Giétro glacial lake outburst flood with GERM (which was also ready to use for this area). These examples show that models developed for current day conditions are transposed without further adaptation to historical conditions, similarly as they are transposed to future conditions (see the following section).
-
-Work on droughts is much less abundant in Switzerland than work on floods, which is related to the fact that missing water was, in the past, not a hot topic in this country known as the water tower of Europe \citep{Milano2015}. What can be highlighted here is that the same models are in use to assess droughts and floods, potentially with specific recalibration, but without modifying the model structure. This is motivated by the fact that existing models are deemed to reproduce well all dominant processes in the Swiss environment, as e.g. explicitly stated in the work of \citet{Zappa2007a} on quantifying the hydrological impact of the 2003 heatwave with a distributed version of PREVAH, later on used for additional drought analyses \citep{Brunner2019,Zappa2019}. Similarly, HBV-light served in several drought studies \citep{Staudinger2014,Staudinger2014a,Staudinger2015} and was used to assess low flow drivers in Alpine catchments \citep{Arnoux_2020}.
-
-However, significant efforts to improve the model representation of groundwater and the corresponding baseflow during droughts remain to be done in Switzerland, which will most probably lead to further model diversification.
 
 \subsection{Climate change impact analysis}
 \label{sec:application:climatechange}
@@ -329,7 +356,7 @@ TOPKAPI-ETH, the other frequently used complex distributed model has also been u
 
 {The most widely used models to study climate change impact on streamflow are to date however the reservoir-based models PREVAH (}\citealt{Koplin2012,Bosshard2013a,Speich_2015,Junker_2014} and others;  see Supplementary material) and HBV-light (\citealt{Etter2017,Hakala2020,Brunner_2018,Jenicek2018}  and others). In the western part of Switzerland, RS and GSM-SOCONT were used in the past, especially for high elevation sites \citep{Horton2006,Uhlmann_2012,Uhlmann2013a,Terrier2015}.
 
-The justification of these models for climate change impact assessments is well summarized by \citet{K_plin_2010} who, for PREVAH, states that the model ``has been developed especially to suit conditions in mountainous environments'' and that it ``has proved to be a reliable and flexible tool for various scopes of application and climate conditions ranging from drought analysis over water balance modelling to flood estimation and forecasting''. 
+The justification of these models for climate change impact assessments is well summarized by \citet{Koplin2010} who, for PREVAH, states that the model ``has been developed especially to suit conditions in mountainous environments'' and that it ``has proved to be a reliable and flexible tool for various scopes of application and climate conditions ranging from drought analysis over water balance modelling to flood estimation and forecasting''. 
 
 Overall, studies on the impact of vegetation changes remain extremely rare in Switzerland; examples include the analysis of forest change by \citet{zierl05} with the ecohydrologic model RHESSys (not further used in Switzerland), by \citet{Koplin2013} and \citet{Schattan2013} with PREVAH and by \citet{Alaoui2014} with WaSiM. The work of \citet{Milano2015a} with PREVAH is to date the only study accounting also for anthropogenic effects on future water stress. 
 
