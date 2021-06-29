@@ -33,12 +33,12 @@
 \maketitle
 
 \begin{abstract}
-	This supplementary material contains two parts: first an extended version of the history of hydrological modelling in Switzerland, and second a table listing all modelling papers for Section 3 of the main paper (related to applications of hydrological models in Switzerland).
+	This supplementary material contains two parts: first an extended version of the history of hydrological modelling in Switzerland, and second a table listing all modelling papers that were used for the analysis of Section 3 of the main paper (related to applications of hydrological models in Switzerland).
 \end{abstract}
 
 
 
-\section{History of hydrological modelling in Switzerland, extended version}
+\section{History of hydrological modelling in Switzerland}
 
 
 \subsection{Preliminary remark}
@@ -48,18 +48,18 @@ There was a journal entitled "Schweizerische Zeitschrift für Hydrologie" (Swiss
 
 \subsection{History of hydrological modelling in Switzerland}
 
-On WebOfScience, the very first hydrological modelling paper that refers to Switzerland (index search: hydrolog* and model* and Switzerland or Swiss) was published by \citet{baumgartner1986} and was a proof of method for the use of remote sensing data for snow runoff modelling with the Snowmelt Runoff Model \citep[SRM,][]{martinec1975}. Journal of Hydrology has nevertheless published an earlier Swiss modelling paper, the work of \citet{hager1984}, who used a no-name conceptual model to predict the effect of heavy rainfall on an 8 km2 catchment in the Swiss lowlands.
+On WebOfScience, the very first hydrological modelling paper that refers to Switzerland (index search: hydrolog* and model* and Switzerland or Swiss) was published by \citet{baumgartner1986} and was a proof of method for the use of remote sensing data for snow runoff modelling with the Snowmelt Runoff Model \citep[SRM,][]{martinec1975}. Journal of Hydrology has nevertheless published an earlier Swiss modelling paper, the work of \citet{hager1984}, who used a no-name conceptual model to predict the effect of heavy rainfall on an 8~km\textsuperscript{2} catchment in the Swiss lowlands.
 
 Digging into professional journals and doctoral theses and conducting personal enquiries revealed the early hydrological modelling work of \citet{naef1974} for engineering applications. The work of Naef in particular also includes a very early hydrological model intercomparison study \citep{naef1977} where the behaviour of several conceptual models have been tested for three small well-instrumented catchments to understand if complex models yield better results than very simple ones.
 
 The above work on input-output models (the focus of the main paper) in the 1970-1980ies was preceded by regression-based methods for real-time forecasting, specifically for inflow to hydropower plants \citep{jensenlang1973} and streamflow in the River Rhine \citep[e.g. to predict downstream summer droughts,][]{lugiez1969}.
 
-Most of the early modelling work on streamflow with models representing hydrological processes (rather than purely statistical models) aimed at the development of operational forecast procedures and had a strong focus on snowmelt runoff and related streamflow, including in the lowland \citep{braun1986}. Snowmelt modelling probably started with the work of \citet{hoeck1952}, and modelling of snow runoff kept a strong influence on hydrological model development in the following decades (see main paper, Section 3).
+Most of the early modelling work on streamflow with models representing hydrological processes (rather than purely statistical models) aimed at the development of operational forecast procedures and had a strong focus on snowmelt runoff and related streamflow, including in the lowland \citep{braun1986}. Snowmelt modelling probably started with the work of \citet{hoeck1952}, and modelling of snow runoff kept a strong influence on hydrological model development in the following decades.
 
 The work of \citet{braun1986} combined the well-known temperature-index snow model \citep[underlying also the SRM model;][]{martinec1975} to the simplest possible streamflow transformation model, which assumes that half of the snowmelt during a given time step reaches the stream directly and the other half reaches it following a linear recession. This simplified approach (compared to more recent runoff transformation routines that use a recession coefficient as in SRM), dates back to the work of \citet{martinec1970} on snowmelt runoff modelling, which is thus probably the earliest runoff modelling study in Switzerland. 
 
 Early modelling work also included glacier-melt runoff simulation \citep[][who used a model called HBV3-ETH, not in use anymore]{braun90}. \citet{braun1992} completed first attempts of parameter regionalization, i.e. the transfer of model parameters from one catchment to another, based on catchment characteristics. The work of \citet{hottelet1993} is an early example of model adaptation to a specific catchment; they added three parameters to HBV-ETH to account for aspect dependent snowmelt and karst runoff for the Thur catchment.
-During the same period, one of the very first climate change impact prediction studies in Switzerland was the work of \citet{bultot1992}, who applied a conceptual hydrological model called IRMB on a 212 km2 lowland catchment. \citet{jordan1990} completed one of the first land-use change impact studies on streamflow in mountainous regions, using Topmodel. 
+During the same period, one of the very first climate change impact prediction studies in Switzerland was the work of \citet{bultot1992}, who applied a conceptual hydrological model called IRMB on a 212~km\textsuperscript{2} lowland catchment. \citet{jordan1990} completed one of the first land-use change impact studies on streamflow in mountainous regions, using Topmodel. 
 
 Hydrologic process studies in experimental catchments started early on, with a focus on the role of forests on water quality and streamflow in the Alptal catchment \citep{keller1970, keller1989} and a focus on rural runoff generation processes \citep{jaton1982}.
 
@@ -77,9 +77,23 @@ Finally, it is important to point out that the above overview lacks reference to
 	
 \section{Hydrological model uses}
 
+This section lists the articles (Table \ref{table:articles}) that were used for the analysis of Sect. 3 of the main paper. An analysis of the temporal evolution of model use (Fig. \ref{fig:bars}) suggests a small opening to international models.
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width=0.55\columnwidth]{figures/histogram.png}
+		\caption{{Number of articles reporting applications of hydrological models over the years with a distinction of the models developed in Switzerland and international models. The relatively higher peak in 2003 is mainly due to articles related to the MAP project (Mesoscale Alpine Programme).
+		{\label{fig:bars}}
+		}}
+	\end{center}
+\end{figure}
 	
 \setlength\extrarowheight{3pt}
+\LTcapwidth=1.43\textwidth
 \begin{longtable}{| P{4.8cm} | P{2.5cm}| P{4cm}| P{4cm}| X{1.2cm}| X{1.2cm}| X{1.2cm}| X{1.2cm}|}
+
+\caption{List of reviewed modelling papers ordered by dates and author names. Adequacy: the adequacy of the model with the landscape or use case has been justified; Reuse: the model set up has been explicitly reused from previous work; Affiliation: the first author is affiliated with the institute where the model is being developed; Co-auth.: the model developer or its lead scientist is co-authoring the paper.}\\
+
 
 \hline
 \textbf{Reference}	&	\textbf{Model(s)}	&	\textbf{Field of application}	&	\textbf{Location}	&	\textbf{Adequacy}	&	\textbf{Reuse}	&	\textbf{Affiliation}	&	\textbf{Co-auth.}	\\ \hline
@@ -246,10 +260,8 @@ Finally, it is important to point out that the above overview lacks reference to
 \hline
 \multicolumn{8}{l}{* not relevant or not analysed}\\
 
-
-\caption{List of reviewed modelling papers ordered by dates and author names. Adequacy: the adequacy of the model with the landscape or use case has been justified; Reuse: the model set up has been explicitly reused from previous work; Affiliation: the first author is affiliated with the institute where the model is being developed; Co-auth.: the model developer or its lead scientist is co-authoring the paper.}
-
 \end{longtable}
+\label{table:articles}
 
 \end{landscape}
 
